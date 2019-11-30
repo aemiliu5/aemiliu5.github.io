@@ -1,0 +1,82 @@
+body
+{
+	margin: 40px auto;
+	max-width: 900px;
+	line-height: 1.6;
+	font-family: 'Jost';
+	font-size: 18px;
+	color: #444;
+	background-color: #DDD;
+}
+
+h1, h2, h3
+{
+	line-height: 0.5;
+}
+
+a
+{
+	color: #4444DD;
+}	
+
+nav 
+{
+	position: sticky;
+	list-style-type: none;
+	margin-top: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li 
+{
+	float: right;
+}
+
+li a 
+{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover 
+{
+	background-color: #222;
+}
+
+#logo
+{
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding-right: 14px 16px;
+	margin-left: 14px;
+	text-decoration: none;
+}
+
+#logo a
+{
+	color: white;
+	text-decoration: none;
+}
+
+footer
+{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #555;
+	color: white;
+	text-align: center;
+}
+
+footer a
+{
+	color: #DDD;
+}

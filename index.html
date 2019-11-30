@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	
+	<header>
+		<nav>
+			<h1 id="logo" style="display:none;"><a href="index.html">Æmilius</a></h1>
+			<!-- Those come out in reverse order! -->
+			<div id="nav1" style="display:none;"><li><a href="#">Contact</a></li></div>
+			<div id="nav2" style="display:none;"><li><a href="#">Projects</a></li>
+			<div id="nav3" style="display:none;"><li><a href="#">About</a></li>
+		</nav>
+	</header>
+
+	<body>
+		<p align="center">
+			This page is currently under construction.<br />
+			You can always shoot me an e-mail at <a href="mailto:emilios@komiphotography.com">emilios@komiphotography.com</a>
+		</p>
+	</body>
+
+	<footer>
+		© 2019 Aimilios Seimenis, all rights reserved
+	</footer>
+		
+	<script>
+		$(document).ready(function(){ $("#logo").fadeIn(1500); });
+		$(document).ready(function(){ $("#nav1").delay(500).fadeIn(1500); });
+		$(document).ready(function(){ $("#nav2").delay(1000).fadeIn(1500); });
+		$(document).ready(function(){ $("#nav3").delay(1500).fadeIn(1500); });
+	</script>
+
+</html>
