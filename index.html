@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 
+	<title>Æmilius | Home</title>
+
 	<head>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	</head>
@@ -11,16 +13,28 @@
 		<nav>
 			<h1 id="logo" style="display:none;"><a href="index.html">Æmilius</a></h1>
 			<!-- Those come out in reverse order! -->
-			<div id="nav1" style="display:none;"><li><a href="#">Contact</a></li></div>
-			<div id="nav2" style="display:none;"><li><a href="#">Projects</a></li>
-			<div id="nav3" style="display:none;"><li><a href="#">About</a></li>
+			<div id="nav1" style="display:none;"><li><a href="contact.html">Contact</a></li></div>
+			<div id="nav2" style="display:none;"><li><a href="projects.html">Projects</a></li></div>
+			<div id="nav3" style="display:none;"><li><a href="about.html">About</a></li></div>
 		</nav>
 	</header>
 
+	<br /><br />
+	<div class="video-container">
+		<video width="900" autoplay muted loop>
+			<source src="vid/cover.mp4" type="video/mp4">
+		</video>
+
+		<div class="video-overlay">
+			<div id="hometext" align="center" style="display:none;">
+				Making the world better through creative games.
+			</div>
+		</div>
+	</div>
+
 	<body>
 		<p align="center">
-			This page is currently under construction.<br />
-			You can always shoot me an e-mail at <a href="mailto:emilios@komiphotography.com">emilios@komiphotography.com</a>
+			Hi. I'm Aimilios Seimenis and I make games. This is my personal website and portfolio, where I showcase my work. You can explore and learn more about me by using the menu above.
 		</p>
 	</body>
 
@@ -28,11 +42,8 @@
 		© 2019 Aimilios Seimenis, all rights reserved
 	</footer>
 		
+	<script src="js/navfade.js"></script>
 	<script>
-		$(document).ready(function(){ $("#logo").fadeIn(1500); });
-		$(document).ready(function(){ $("#nav1").delay(500).fadeIn(1500); });
-		$(document).ready(function(){ $("#nav2").delay(1000).fadeIn(1500); });
-		$(document).ready(function(){ $("#nav3").delay(1500).fadeIn(1500); });
+		$(document).ready(function(){ $("#hometext").delay(1000).fadeIn(2500); });
 	</script>
-
 </html>
