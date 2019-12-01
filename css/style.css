@@ -16,7 +16,7 @@ h1, h2, h3
 
 a
 {
-	color: #4444DD;
+	color: #364E63;
 }	
 
 nav 
@@ -29,12 +29,12 @@ nav
 	background-color: #333;
 }
 
-li 
+nav li 
 {
 	float: right;
 }
 
-li a 
+nav li a 
 {
 	display: block;
 	color: white;
@@ -43,9 +43,46 @@ li a
 	text-decoration: none;
 }
 
-li a:hover 
+nav li a:hover 
 {
 	background-color: #222;
+}
+
+footer
+{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #555;
+	color: white;
+	text-align: center;
+}
+
+footer a
+{
+	color: #DDD;
+}
+
+.video-container 
+{ 
+	position: relative; 
+}
+
+.video-container video
+{
+	position: relative;
+	z-index: 0;
+}
+
+.video-overlay
+{
+	position: absolute;
+	top: 150px;
+	left: 40px;
+	color: #DDD;
+	text-shadow: 2px 2px #222;
+	z-index: 1;
 }
 
 #logo
@@ -65,18 +102,12 @@ li a:hover
 	text-decoration: none;
 }
 
-footer
+#gamedesc
 {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: #555;
-	color: white;
-	text-align: center;
+	font-size: 16px;
 }
 
-footer a
+#hometext
 {
-	color: #DDD;
+	font-size: 40px; 
 }
