@@ -64,6 +64,40 @@ footer a
 	color: #DDD;
 }
 
+table, th, tr
+{
+	border: solid 1px #444;
+}
+
+td
+{
+	border: solid 1px #444;
+}
+
+blockquote 
+{
+	background: #eee;
+	border-left: 12px solid #ccc;
+	margin: 1.5em 75px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before 
+{
+	color: #ddd;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+
+blockquote p 
+{
+	display: inline;
+}
+
 .video-container 
 { 
 	position: relative; 
