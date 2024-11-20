@@ -52,7 +52,7 @@ export default function Games() {
                 <div id="home" className="relative flex items-center justify-center w-full h-full">
                     <Head>
                         <title>Aimilios Seimenis - Game Programmer</title>
-                        <link rel="icon" href="/favicon.ico" />
+                        <link rel="icon" href="/favicons/favicon.ico" />
                     </Head>
 
                     <main className={`relative text-white ${league.className} bg-[#070707] w-full h-full`}>
