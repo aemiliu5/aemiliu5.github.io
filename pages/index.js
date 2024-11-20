@@ -101,11 +101,13 @@ export default function Home() {
 									description="Arcade videogame for SIXT's Greek airport branches, rewarding customers while they wait for car pickup."
 								/>
 								<ScrollableItem
+									link="https://www.youtube.com/watch?v=zWEElV3jX3k"
 									imageSrc="/opap.png"
 									name="OPAP MARATHON VR"
 									description="Running game with parallel projection to a video-wall, played using a KAT VR for Athens Marathon 2023."
 								/>
 								<ScrollableItem
+									link="https://vimeo.com/884704127"
 									imageSrc="/magic_carpet.jpg"
 									name="MAGIC CHRISTMAS CARPET"
 									description="The biggest interactive projection mapping project in Greece, made for The Ellinikon in 2022."
@@ -116,6 +118,7 @@ export default function Home() {
 									description="Quiz applications made for Cosmopop 2021, organized by COSMOTE, the largest telecom company in Greece."
 								/>
 								<ScrollableItem
+									link="https://eduapps.gr/"
 									imageSrc="/istoria_app.jpg"
 									name="ISTORIA APP"
 									description="Educational application for the preparation of high-school students on Greek university entrance exams."

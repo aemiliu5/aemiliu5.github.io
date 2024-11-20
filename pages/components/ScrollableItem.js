@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ScrollableItem = ({ imageSrc, name, description }) => {
+const ScrollableItem = ({ link = "", imageSrc, name, description }) => {
   return (
-    <Link href="">
+    <Link href={link}>
       <div className="w-[360px] sm:w-[480px] bg-[#101010] text-white p-4 rounded-2xl hover:scale-[103%] hover:opacity-75 duration-200">
         <div className="relative h-[240px] sm:h-[300px]">
           <Image 
