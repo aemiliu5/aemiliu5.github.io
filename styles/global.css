@@ -1,0 +1,9 @@
+/* Example custom CSS for FontAwesome icons */
+.font-awesome-icon {
+  font-size: 3px; /* Adjust the size as needed */
+  color: #6157da; /* Adjust the color as needed */
+}
+
+html {
+  scroll-behavior: smooth;
+}

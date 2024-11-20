@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-hook/media-query": "^1.1.1",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "github:splidejs/splide",
+    "hls": "^0.0.1",
+    "hls.js": "^1.5.7",
+    "media-query": "^1.0.0",
+    "next": "latest",
+    "plyr": "^3.7.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.10.2",
+    "react-player": "^2.14.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.3",
+    "video.js": "^8.10.0"
+  }
+}
