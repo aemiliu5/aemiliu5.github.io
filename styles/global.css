@@ -1,0 +1,63 @@
+/* Example custom CSS for FontAwesome icons */
+.font-awesome-icon {
+  font-size: 3px; /* Adjust the size as needed */
+  color: #6157da; /* Adjust the color as needed */
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 15px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* General styling for all slides within video-splide */
+.video-splide .splide__slide {
+  position: relative;
+  transition: opacity 0.1s ease-in-out;
+  pointer-events: none; /* Disable interactions by default */
+}
+
+/* Grey overlay for non-active slides within video-splide */
+.video-splide .splide__slide:not(.is-active) {
+  opacity: 0.5; /* Dim inactive slides */
+}
+
+/* Optional: Remove the grey fade on hover for non-active slides within video-splide */
+.video-splide .splide__slide:not(.is-active):hover {
+  opacity: 0.7; /* Slightly brighten on hover */
+}
+
+/* No overlay for active (centered) slide within video-splide */
+.video-splide .splide__slide.is-active {
+  opacity: 1; /* Fully visible */
+  pointer-events: auto; /* Allow interactions */
+}
+
+
+.active-link::after {
+  content: ""; /* Adds a custom underline */
+  position: absolute;
+  width: 100%; /* Full width of the text */
+  height: 2px; /* Thickness of the underline */
+  background-color: white; /* Color of the underline */
+  bottom: -6px; /* Distance from the text to the underline */
+  left: 0;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+.active-link:hover::after {
+  transform: scaleX(1.2); /* Slightly increase the underline length on hover */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
