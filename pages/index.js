@@ -78,7 +78,7 @@ export default function Home() {
 								
 								<br /><br />Developed by Team Abtos and published by Iphigames, Abtos Covert was released on Steam on December 8, 2023 to positive reviews.
 								<br /><br />The game received substantial press coverage from
-								  <Link href={"https://gr.ign.com/abtos-covert/113879/review/abtos-covert-review"} className={"underline"}> IGN Greece</Link>,
+								  <Link href={"https://gr.ign.com/abtos-covert/113879/review/abtos-covert-review"}> IGN Greece</Link>,
 								  <Link href={"https://gr.pcmag.com/games-reviews/46247/abtos-covert-review"}> PC Mag Greece</Link>,
 								  <Link href={"https://unboxholics.com/news/gaming/109811-to-abtos-covert-einai-to-neo-horror-paichnidi-apo-ellines-developers-vinteo"}> Unboxholics</Link>,
 								  <Link href={"https://www.enternity.gr/Article/Games/News/kykloforise-to-elliniko-abtos-covert-videogame-trailer/85181.html"}> Enternity</Link> and reported on TV by
