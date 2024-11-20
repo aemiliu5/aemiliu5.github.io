@@ -4,7 +4,7 @@ import Head 							from 'next/head';
 import Image 							from 'next/image';
 import Link 							from 'next/link';
 import Layout 							from './components/Layout'; // Adjust path as necessary
-import { league, leagueBold } 			from './utils/fonts'; // Adjust path as necessary
+import { league, leagueBold } 			from '../utils/fonts'; // Adjust path as necessary
 import TextDivider 						from './components/TextDivider';
 import SocialMediaLink 					from './components/SocialMediaLink';
 import Carousel 						from './components/Carousel';
