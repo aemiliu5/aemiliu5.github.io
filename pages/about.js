@@ -3,7 +3,7 @@ import React, { useState, useEffect } 	from 'react';
 import Head 							from 'next/head';
 import Image 							from 'next/image';
 import Layout 							from './components/Layout'; // Adjust path as necessary
-import { league, leagueBold } 			from './utils/fonts'; // Adjust path as necessary
+import { league, leagueBold } 			from '../utils/fonts'; // Adjust path as necessary
 import TextDivider 						from './components/TextDivider';
 import SocialMediaLink 					from './components/SocialMediaLink';
 import Carousel 						from './components/Carousel';

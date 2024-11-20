@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { league, leagueBold } from "../utils/fonts.js";
+import { league, leagueBold } from "../../utils/fonts.js";
 import "tailwind-scrollbar";
 
 function Navbar() {

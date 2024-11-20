@@ -1,5 +1,5 @@
 import React from 'react';
-import { league, leagueBold } from '../utils/fonts.js';
+import { league, leagueBold } from '../../utils/fonts.js';
 import 'tailwind-scrollbar';
 
 import SocialMediaLink from '../components/SocialMediaLink';

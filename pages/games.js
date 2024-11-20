@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout'; // Adjust path as necessary
-import { league, leagueBold } from './utils/fonts'; // Adjust path as necessary
+import { league, leagueBold } from '../utils/fonts'; // Adjust path as necessary
 import Footer from './components/Footer';
 import GamesItem from './components/GamesItem'; // Import ScrollableItemGrid component
 

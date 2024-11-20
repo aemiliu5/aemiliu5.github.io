@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ScrollableItemGrid = ({ imageSrc, name, link, category }) => {
+const ScrollableItemGrid = ({ imageSrc, name, link = "", category }) => {
   return (
     <Link href={link}>
       <div className="w-[360px] sm:w-[450px] h-[350px] bg-[#101010] text-white p-4 rounded-2xl flex-shrink-0 hover:scale-[103%] hover:opacity-75 duration-200">
