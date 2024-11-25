@@ -65,3 +65,16 @@
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes rotate360 {
+  from {
+    transform: scale(1.15) rotate(0deg);
+  }
+  to {
+    transform: scale(1.15) rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate360 0.5s ease-in-out;
+}
