@@ -28,7 +28,7 @@ function Footer() {
             </div>
 
             <div className={`text-[14px] sm:text-[24px] text-center my-4`}>
-            Copyright © 2019-2024 Aimilios Seimenis, all rights reserved.<br />
+            Copyright © 2019-2025 Aimilios Seimenis, all rights reserved.<br />
             Designed with ❤️ by Antonia Baziotopoulou<br />
             Programmed by Aimilios Seimenis
             </div>

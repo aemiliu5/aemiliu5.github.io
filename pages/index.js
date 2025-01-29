@@ -197,9 +197,9 @@ export default function Home() {
 								link="https://nickzouk.itch.io/paternitree"
 							/>
 							<ScrollableItemGrid
-								imageSrc="/audissey.png"
-								name="2022: A SPACE AUDISSEY"
-								link="https://drive.google.com/file/d/14sS3vebAAYV8vpeuQ7pmCvkzHnS2-3Oy/view"
+								imageSrc="/bubblin.png"
+								name="BUBBLIN' TO THE TOP!"
+								link="https://globalgamejam.org/games/2025/cat-bubble-1"
 							/>
 							<ScrollableItemGrid
 								imageSrc="/glitsa.jpg"
