@@ -10,6 +10,7 @@ export default function Games() {
 
     // Define all projects in an array with their categories
     const projects = [
+        { imageSrc: "/bubblin.png",         name: "BUBBLIN' TO THE TOP!",                   link: "https://globalgamejam.org/games/2025/cat-bubble-1",                      category: "jam" },
         { imageSrc: "/chuckles.png",        name: "CHUCKLES WITH THE FURRY CROWN",          link: "https://globalgamejam.org/games/2024/jester-2",                          category: "jam" },
         { imageSrc: "/paternitree.png",     name: "PATERNITREE",                            link: "https://nickzouk.itch.io/paternitree",                                   category: "jam" },
         { imageSrc: "/abtos.jpg",           name: "ABTOS COVERT",                           link: "https://store.steampowered.com/app/1694230/Abtos_Covert/",               category: "personal" },
@@ -63,7 +64,7 @@ export default function Games() {
                                 <div className={`${league.className} text-[18px] leading-6 mt-8 sm:mx-0 sm:mt-0 sm:leading-normal sm:text-[24px]`}>This is the complete list of projects I've been involved in as a game programmer, sorted from most recent and also categorized for your convenience. Click on the categories below to filter projects accordingly.</div>
 
                                 {/* Filter Buttons with fade effect */}
-                                <div className="grid grid-cols-3 gap-2 sm:gap-0 sm:mx-64 justify-center items-center mt-8 mb-4">
+                                <div className="grid grid-cols-3 gap-2 sm:gap-0 sm:mx-32 justify-center mt-8 mb-4">
                                     <button
                                         type="button"
                                         className={`text-white text-[20px] text-center bg-[#5E51CB] rounded-full sm:px-12 py-2 sm:mr-8 transition-opacity duration-300 ${selectedCategory === 'student' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
@@ -73,10 +74,10 @@ export default function Games() {
                                     </button>
                                     <button
                                         type="button"
-                                        className={`text-white text-[20px] text-center bg-[#3EB17E] rounded-full sm:px-12 py-2 sm:py-2 sm:mr-8 transition-opacity duration-300 ${selectedCategory === 'jam' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
+                                        className={`text-white text-[20px] text-center bg-[#3EB17E] rounded-full sm:px-12 py-1 sm:py-2 sm:mr-8 transition-opacity duration-300 ${selectedCategory === 'jam' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
                                         onClick={() => handleCategorySelect('jam')}
                                     >
-                                        Game<br /> Jams
+                                        Game Jam
                                     </button>
                                     <button
                                         type="button"
