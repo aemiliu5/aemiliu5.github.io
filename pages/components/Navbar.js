@@ -97,7 +97,7 @@ function Navbar() {
             </li>
             <li className="navItem">
               <a
-                href="/aimilios-seimenis-cv-2024.pdf"
+                href="/aimilios-seimenis-cv-2025.pdf"
                 className={`relative text-white text-[35px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 ${
                   isActive("/aimilios-seimenis-cv-2025.pdf")
                     ? "active-link"
