@@ -33,7 +33,7 @@ function Navbar() {
         <div className="flex justify-between items-center px-8">
           {/* Logo */}
           <div
-            className={`text-left text-white text-[40px] sm:text-[60px] text-shadow-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] pt-2 ${leagueBold.className}`}
+            className={`text-left text-white text-[36px] sm:text-[54px] text-shadow-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] ${leagueBold.className}`}
           >
             <a
               href="/"
@@ -65,7 +65,7 @@ function Navbar() {
             <li className="navItem">
               <a
                 href="/about"
-                className={`relative text-white text-[35px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 ${
+                className={`relative text-white text-[32px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 ${
                   isActive("/about") ? "active-link" : ""
                 }`}
                 onClick={closeMenu}
@@ -76,7 +76,7 @@ function Navbar() {
             <li className="navItem">
               <a
                 href="/games"
-                className={`relative text-white text-[35px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 ${
+                className={`relative text-white text-[32px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 ${
                   isActive("/games") ? "active-link" : ""
                 }`}
                 onClick={closeMenu}
@@ -87,7 +87,7 @@ function Navbar() {
             <li className="navItem">
               <a
                 href="/photovideo"
-                className={`relative text-white text-[35px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 ${
+                className={`relative text-white text-[32px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 ${
                   isActive("/photovideo") ? "active-link" : ""
                 }`}
                 onClick={closeMenu}
@@ -98,7 +98,7 @@ function Navbar() {
             <li className="navItem">
               <a
                 href="/aimilios-seimenis-cv-2025.pdf"
-                className={`relative text-white text-[35px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 ${
+                className={`relative text-white text-[32px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 ${
                   isActive("/aimilios-seimenis-cv-2025.pdf")
                     ? "active-link"
                     : ""
