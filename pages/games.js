@@ -60,7 +60,6 @@ export default function Games() {
                         <div className={`flex items-center`}>
                             <div className={`p-6 sm:mx-48 h-[25%]`}>
                                 <div className={`${leagueBold.className} text-[40px] sm:text-[60px] text-bold`}>GAMES</div>
-                                <div className={`${league.className} text-[26px] sm:text-[32px]`}>The complete library.</div>
                                 <div className={`${league.className} text-[18px] leading-6 mt-8 sm:mx-0 sm:mt-0 sm:leading-normal sm:text-[24px]`}>This is the complete list of projects I've been involved in as a game programmer, sorted from most recent and also categorized for your convenience. Click on the categories below to filter projects accordingly.</div>
 
                                 {/* Filter Buttons with fade effect */}
@@ -91,22 +90,19 @@ export default function Games() {
                         </div>
 
                         {/* Wrapper to center the grid */}
-                        <div className="flex justify-center items-center mt-4 mb-16">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-[120rem] mx-auto px-2">
-                                {filteredProjects.map((project, index) => (
-                                    <div
-                                        key={index}
-                                        className="transition-transform transform hover:scale-105"
-                                        style={{ animationDelay: `${index * 0.1}s` }} // Staggered animation
-                                    >
+                        <div className="flex justify-center mt-12 mb-20 px-4 sm:px-6">
+                            <div className="w-full max-w-[1200px]">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-14 justify-items-center">
+                                    {filteredProjects.map((project, index) => (
                                         <GamesItem
+                                            key={project.link ?? index}
                                             imageSrc={project.imageSrc}
                                             name={project.name}
                                             link={project.link}
                                             category={project.category}
                                         />
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
 

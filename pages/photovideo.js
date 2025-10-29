@@ -12,6 +12,8 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 const images = [
+	{ src: "/photos/kythnos1.jpg", alt: "Kythnos 1" },
+	{ src: "/photos/kythnos2.jpg", alt: "Kythnos 2" },
 	{ src: "/photos/milies.png", alt: "Milies" },
 	{ src: "/photos/salonika.png", alt: "Salonika" },
 	{ src: "/photos/kea.jpg", alt: "Kea" },
@@ -44,14 +46,11 @@ export default function Photo() {
 						<div className={`flex items-center`}>
 							<div className={`p-6 sm:mx-48 h-[25%]`}>
 								<div className={`${leagueBold.className} text-[40px] sm:text-[60px] text-bold`}>PHOTO/VIDEO</div>
-								<div className={`${league.className} text-[26px] sm:text-[32px]`}>
-									Storytelling through the lens.
-								</div>
 								<div
 									className={`${league.className} text-[18px] leading-6 mt-8 sm:mt-0 sm:leading-normal sm:text-[24px]`}
 								>
 									Alongside my main career, I’ve worked professionally as a photographer,
-									videographer, and editor across various fields, while also capturing breathtaking landscapes as a
+									videographer, and editor across various fields, while also capturing beautiful landscapes as a
 									personal passion. I hope my work inspires you, and if you’d like to collaborate, don’t hesitate to
 									reach out.
 								</div>
