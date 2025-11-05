@@ -63,9 +63,9 @@ const CarouselVideo = () => {
     const mobileOptions = {
         type: "loop",
         perPage: 1,
-        gap: "0rem",
-        padding: "0rem",
-        heightRatio: 1,
+        gap: "0.5rem",
+        padding: { left: "1.75rem", right: "1.75rem" },
+        heightRatio: 0.65,
         focus: "center",
     };
 

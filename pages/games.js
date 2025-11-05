@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout'; // Adjust path as necessary
-import { league, leagueBold } from '../utils/fonts'; // Adjust path as necessary
+import { league, leagueBold, dmSans } from '../utils/fonts'; // Adjust path as necessary
 import Footer from './components/Footer';
 import GamesItem from './components/GamesItem'; // Import ScrollableItemGrid component
 
 export default function Games() {
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [isFading, setIsFading] = useState(false);
 
     // Define all projects in an array with their categories
     const projects = [
@@ -42,9 +43,21 @@ export default function Games() {
         ? projects.filter(project => project.category === selectedCategory)
         : projects;
 
-    // Handle category selection/deselection
+    // Handle category selection/deselection with fade animation
     const handleCategorySelect = (category) => {
-        setSelectedCategory(selectedCategory === category ? null : category);
+        const newCategory = selectedCategory === category ? null : category;
+        
+        // Start fade-out animation
+        setIsFading(true);
+        
+        // After fade-out completes, update category and fade in
+        setTimeout(() => {
+            setSelectedCategory(newCategory);
+            // Small delay to ensure DOM update before fade-in
+            setTimeout(() => {
+                setIsFading(false);
+            }, 10);
+        }, 300); // 0.3 seconds for fade-out
     };
 
     return (
@@ -56,31 +69,31 @@ export default function Games() {
                         <link rel="icon" href="/favicons/favicon.ico" />
                     </Head>
 
-                    <main className={`relative text-white ${league.className} bg-[#070707] w-full h-full`}>
+                    <main className={`relative text-white ${league.className} page-background w-full h-full`}>
                         <div className={`flex items-center`}>
                             <div className={`p-6 sm:mx-48 h-[25%]`}>
                                 <div className={`${leagueBold.className} text-[40px] sm:text-[60px] text-bold`}>GAMES</div>
-                                <div className={`${league.className} text-[18px] leading-6 mt-8 sm:mx-0 sm:mt-0 sm:leading-normal sm:text-[24px]`}>This is the complete list of projects I've been involved in as a game programmer, sorted from most recent and also categorized for your convenience. Click on the categories below to filter projects accordingly.</div>
+                                <div className={`${dmSans.className} text-[18px] leading-6 mt-8 sm:mx-0 sm:mt-0 sm:leading-normal sm:text-[18px]`}>This is the complete list of projects I've been involved in as a game programmer, sorted from most recent and also categorized for your convenience. Click on the categories below to filter projects accordingly.</div>
 
                                 {/* Filter Buttons with fade effect */}
-                                <div className="grid grid-cols-3 gap-2 sm:gap-0 sm:mx-32 justify-center mt-8 mb-4">
+                                <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 justify-center items-center mt-8 mb-4">
                                     <button
                                         type="button"
-                                        className={`text-white text-[20px] text-center bg-[#5E51CB] rounded-full sm:px-12 py-2 sm:mr-8 transition-opacity duration-300 ${selectedCategory === 'student' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
+                                        className={`text-white text-[20px] text-center bg-[#5E51CB] rounded-full px-6 sm:px-12 py-2 sm:mr-8 transition-opacity duration-300 whitespace-nowrap ${selectedCategory === 'student' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
                                         onClick={() => handleCategorySelect('student')}
                                     >
                                         Student project
                                     </button>
                                     <button
                                         type="button"
-                                        className={`text-white text-[20px] text-center bg-[#3EB17E] rounded-full sm:px-12 py-1 sm:py-2 sm:mr-8 transition-opacity duration-300 ${selectedCategory === 'jam' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
+                                        className={`text-white text-[20px] text-center bg-[#3EB17E] rounded-full px-6 sm:px-12 py-1 sm:py-2 sm:mr-8 transition-opacity duration-300 whitespace-nowrap ${selectedCategory === 'jam' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
                                         onClick={() => handleCategorySelect('jam')}
                                     >
                                         Game Jam
                                     </button>
                                     <button
                                         type="button"
-                                        className={`text-white text-[20px] text-center bg-[#9251CB] rounded-full sm:px-12 py-2 sm:mr-8 transition-opacity duration-300 ${selectedCategory === 'personal' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
+                                        className={`text-white text-[20px] text-center bg-[#9251CB] rounded-full px-6 sm:px-12 py-2 transition-opacity duration-300 whitespace-nowrap ${selectedCategory === 'personal' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
                                         onClick={() => handleCategorySelect('personal')}
                                     >
                                         Personal Project
@@ -92,7 +105,7 @@ export default function Games() {
                         {/* Wrapper to center the grid */}
                         <div className="flex justify-center mt-12 mb-20 px-4 sm:px-6">
                             <div className="w-full max-w-[1200px]">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-14 justify-items-center">
+                                <div className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-14 justify-items-center transition-opacity duration-300 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
                                     {filteredProjects.map((project, index) => (
                                         <GamesItem
                                             key={project.link ?? index}

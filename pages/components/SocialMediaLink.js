@@ -5,10 +5,18 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 
 const PJS = Plus_Jakarta_Sans({ weight: '600', subsets: ['latin'] });
 
-const SocialMediaLink = ({ href, fa, size }) => {
+const SocialMediaLink = ({ href, fa, size, iconOnly = false }) => {
+  const icon = (
+    <FontAwesomeIcon icon={fa} className={`mx-2 ${size} text-[#ffffff] text-center ${PJS.className}`} />
+  );
+
+  if (iconOnly || !href) {
+    return icon;
+  }
+
   return (
-    <Link href={href ?? ''}>
-      <FontAwesomeIcon icon={fa} className={`mx-2 ${size} text-[#ffffff] text-center ${PJS.className}`} />
+    <Link href={href}>
+      {icon}
     </Link>
   );
 };
