@@ -24,6 +24,14 @@
 }
 
 /* Grey overlay for non-active slides within video-splide */
+.video-splide .splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
 .video-splide .splide__slide:not(.is-active) {
   opacity: 0.5; /* Dim inactive slides */
 }
@@ -37,6 +45,41 @@
 .video-splide .splide__slide.is-active {
   opacity: 1; /* Fully visible */
   pointer-events: auto; /* Allow interactions */
+}
+
+.video-splide .splide__list {
+  align-items: center;
+}
+
+.video-splide .video-embed {
+  position: relative;
+  width: min(100vw, 768px);
+  transition: transform 0.3s ease;
+}
+
+.video-splide .video-embed::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.video-splide .video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* Scale down non-active slides to 70% (30% smaller) */
+.video-splide .splide__slide:not(.is-active) .video-embed {
+  transform: scale(0.7);
+}
+
+/* Active slide stays at full size */
+.video-splide .splide__slide.is-active .video-embed {
+  transform: scale(1);
 }
 
 
@@ -57,6 +100,24 @@
 }
 
 
+/* Page background gradient - centralized for easy updates */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.page-background {
+  background: 
+   radial-gradient(ellipse at center top, rgba(94, 81, 203, 0.25) 0%, transparent 50%),
+    linear-gradient(-45deg, #020211, #151929);
+  background-size: 100% 100%, 400% 400%;
+  animation: gradientShift 10s ease-in-out infinite;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -72,4 +133,49 @@ html {
 
 .rotate-animation {
   animation: rotate360 0.5s ease-in-out;
+}
+
+/* Scroll-triggered fade-in and slide-up animation */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[class*="DM_Sans"] b,
+[class*="dm-sans"] b,
+[class*="__DM_Sans"] b {
+  font-weight: 700;
+}
+
+/* Lightbox Caption Styling - League Spartan font */
+.yarl__slide_title,
+.yarl__slide_description {
+  font-family: 'League Spartan', sans-serif !important;
+  text-align: center !important;
+}
+
+/* Ensure descriptions display properly with horizontal layout */
+.yarl__slide_description {
+  white-space: normal !important;
+}
+
+/* Style bold labels in descriptions */
+.yarl__slide_description strong {
+  font-weight: 600 !important;
+  font-family: 'League Spartan', sans-serif !important;
+}
+
+/* Style the description container for horizontal layout */
+.yarl__slide_description > div {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
 }

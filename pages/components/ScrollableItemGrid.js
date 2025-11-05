@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { leagueBold } from '../../utils/fonts';
 
 const ScrollableItemGrid = ({ imageSrc, name, link = "", category }) => {
   return (
@@ -14,7 +15,7 @@ const ScrollableItemGrid = ({ imageSrc, name, link = "", category }) => {
             objectFit="cover"
             className="rounded-2xl duration-200"
           />
-          <h3 className="absolute bottom-0 left-0 w-full bg-[#191919de] pl-4 pt-2 text-center text-[26px] rounded-b-xl">
+          <h3 className={`absolute bottom-0 left-0 right-0 w-full bg-[#191919de] px-4 pt-2 text-center text-[26px] rounded-b-xl ${leagueBold.className}`}>
             {name}
           </h3>
         </div>
