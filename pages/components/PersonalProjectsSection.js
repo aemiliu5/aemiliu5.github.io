@@ -2,7 +2,7 @@ import React from 'react';
 import TextDivider from './TextDivider';
 import ScrollableItemGrid from './ScrollableItemGrid';
 import StyledButton from './StyledButton';
-import { useScrollAnimation } from './useScrollAnimation';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const personalProjects = [
 	{

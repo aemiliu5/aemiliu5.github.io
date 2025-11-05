@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Layout from './components/Layout';
 import { league, leagueBold, dmSans } from '../utils/fonts';
 import Footer from './components/Footer';
-import { useScrollAnimation } from './components/useScrollAnimation';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 function AboutPair({ imageSrc, imageAlt, imageClass, title, content, isReversed }) {
 	const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
