@@ -6,7 +6,7 @@ import AsSeenOn from './AsSeenOn';
 import StyledButton from './StyledButton';
 import SocialMediaLink from './SocialMediaLink';
 import { faSteam } from '@fortawesome/free-brands-svg-icons';
-import { useScrollAnimation } from './useScrollAnimation';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const AbtosCovertSection = () => {
 	const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });

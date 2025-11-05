@@ -1,7 +1,7 @@
 import React from 'react';
 import TextDivider from './TextDivider';
 import ScrollableItem from './ScrollableItem';
-import { useScrollAnimation } from './useScrollAnimation';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const professionalWorkItems = [
 	{

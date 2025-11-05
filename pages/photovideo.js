@@ -7,7 +7,7 @@ import { league, leagueBold, dmSans } from "../utils/fonts"; // Adjust path as n
 import TextDivider from "./components/TextDivider";
 import CarouselVideo from "./components/CarouselVideo";
 import Footer from "./components/Footer";
-import { useScrollAnimation } from "./components/useScrollAnimation";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import Masonry from "react-masonry-css";
 import Lightbox from "yet-another-react-lightbox";
 import Captions from "yet-another-react-lightbox/plugins/captions";
