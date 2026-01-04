@@ -29,7 +29,7 @@ function Footer() {
 
             <div className={`text-center my-4`}>
                 <div className="text-[14px] ${league.className} sm:text-[20px]">
-                Copyright © 2019-2025 Aimilios Seimenis, all rights reserved.<br />
+                Copyright © 2019-2026 Aimilios Seimenis, all rights reserved.<br />
                 Designed with ❤️ by Antonia Baziotopoulou & Aimilios Seimenis<br />
                 </div>
             <div className={`text-[8px] ${dmSans.className} mx-[20vw] mt-2`}>
