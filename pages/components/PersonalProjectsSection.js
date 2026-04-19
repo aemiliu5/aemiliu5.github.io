@@ -6,14 +6,14 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const personalProjects = [
 	{
+		imageSrc: "/prosopeion.jpg",
+		name: "PROSOPEION: CULT OF MASKS",
+		link: "https://globalgamejam.org/games/2026/cult-masks-7",
+	},
+	{
 		imageSrc: "/chuckles.png",
 		name: "CHUCKLES WITH THE FURRY CROWN",
 		link: "https://globalgamejam.org/games/2024/jester-2",
-	},
-	{
-		imageSrc: "/paternitree.png",
-		name: "PATERNITREE",
-		link: "https://nickzouk.itch.io/paternitree",
 	},
 	{
 		imageSrc: "/bubblin.png",

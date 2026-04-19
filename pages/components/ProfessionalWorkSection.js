@@ -5,6 +5,11 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const professionalWorkItems = [
 	{
+		imageSrc: "/ergon.png",
+		name: "ERGON-XR",
+		description: "XR interface for ergonomics training, coded in the VIROO multiplayer VR platform.",
+	},
+	{
 		imageSrc: "/sixt.png",
 		name: "SIXT CARSLING",
 		description: "Arcade videogame for SIXT's Greek airport branches, rewarding customers while they wait for car pickup.",

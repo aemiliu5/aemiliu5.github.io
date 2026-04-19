@@ -102,7 +102,7 @@ export default function About() {
 								imageAlt="ISENSE Koropi"
 								imageClass="rounded-3xl border-double border-4 border-neutral-200 shadow-inner hover:scale-105 hover:rotate-[-1deg] transition-all duration-300"
 								title="Research"
-								content={<>I currently work at the <b>I-SENSEGroup of ICCS</b>, the research branch of the National Technical University of Athens. As part of the <b>Extended Reality</b> team, I develop projects in the fields of digital twins, industrial safety, and human-computer interaction.</>}
+								content={<>I currently work at the <b>I-SENSEGroup of ICCS</b>, the research branch of the National Technical University of Athens. As part of the <b>Immersive and Spatial Systems</b> division (ex-XR), I develop projects in the fields of digital twins, industrial safety, and human-computer interaction.</>}
 								isReversed={false}
 							/>
 						</div>
