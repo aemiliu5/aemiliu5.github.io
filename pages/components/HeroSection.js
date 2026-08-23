@@ -33,16 +33,16 @@ const HeroSection = () => {
 	};
 
 	return (
-		<div className="flex flex-col md:flex-row justify-center">
+		<div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-stretch mt-[100px] md:mt-0">
 			<div
-				className={`text-[32px] ${dmSans.className} text-center sm:text-left sm:text-[48px] sm:px-16 md:px-4 sm:py-48 pt-96`}
+				className={`text-[32px] ${dmSans.className} text-center sm:text-left sm:text-[48px] sm:px-16 md:px-4 pt-6 pb-16 sm:py-48`}
 			>
 				Hello there!<br />
 				<div className={`text-[32px] ${dmSans.className} text-center sm:text-left sm:text-[64px] leading-[1.3] py-3`}>
 					I'm <b>Aimilios Seimenis</b><br />
 					& I work on:
 				</div>
-				<div className="slidingTextContainer translate-x-[-50%] sm:translate-x-0">
+				<div className="slidingTextContainer relative h-[48px] sm:h-[120px]">
 					<div
 						className={`slidingText text-[32px] sm:text-[85px] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text ${leagueBold.className}`}
 					>
@@ -51,31 +51,37 @@ const HeroSection = () => {
 				</div>
 			</div>
 
+			{/* Desktop: original left-0 layers + py-36 / ml-16 / mb-64.
+			    Mobile: scale-75 + self-center so the frame sits in the middle of the column. */}
 			<div
-				className="sm:w-[500px] sm:h-[500px] mb-32 sm:py-36 sm:ml-16 sm:object-right sm:mb-64 sm:scale-100 sm:translate-y-0 relative -translate-y-[57vh] scale-75 object-center"
+				className="relative w-[500px] h-[500px] scale-75 origin-center -m-[62.5px] mb-[-40px] self-center sm:self-auto sm:m-0 sm:py-36 sm:ml-16 sm:mb-64 sm:scale-100 sm:translate-y-0 flex-shrink-0"
 			>
 				<Image
-					className="absolute top-35 left-0 brightness-[33%]"
+					className="absolute left-0 brightness-[33%]"
 					src="/glow.png"
 					width={600}
 					height={600}
-					alt="Aimilios"
+					alt=""
+					aria-hidden="true"
+					priority
 				/>
 				<Image
-					className="absolute top-35 left-0 scale-[95%]"
+					className="absolute left-0 scale-[95%]"
 					src="/aimilios.png"
 					width={600}
 					height={600}
-					alt="Aimilios"
+					alt="Portrait of Aimilios Seimenis"
+					priority
 				/>
 				<Image
-					className={`absolute top-35 left-0 scale-105 hover:-hue-rotate-[60deg] hover:scale-[115%] transition-all ${
+					className={`absolute left-0 scale-105 hover:-hue-rotate-[60deg] hover:scale-[115%] transition-all cursor-pointer ${
 						rotate ? "rotate-animation" : ""
 					}`}
 					src="/crosshair.png"
 					width={840}
 					height={840}
-					alt="Aimilios"
+					alt=""
+					aria-hidden="true"
 					id="animatedButton"
 					onClick={handleClick}
 				/>
@@ -85,4 +91,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-

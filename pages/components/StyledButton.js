@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { leagueBold } from '../../utils/fonts';
 
 const StyledButton = ({ href, children, className = "", variant = "default" }) => {
-	const baseClasses = `text-white text-[30px] bg-gradient-to-br from-green-400 to-blue-600 hover:ring-2 hover:ring-green-200 duration-400 transition-all rounded-full ${leagueBold.className}`;
+	const baseClasses = `text-white text-[30px] bg-gradient-to-br from-green-400 to-blue-600 hover:ring-2 hover:ring-green-200 duration-300 transition-all rounded-full ${leagueBold.className}`;
 	const defaultClasses = "text-center px-12 py-2";
 	const withIconClasses = "flex items-center justify-center space-x-2 px-8 py-2";
 

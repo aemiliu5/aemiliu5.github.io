@@ -4,25 +4,36 @@ import Link from 'next/link';
 import { leagueBold } from '../../utils/fonts';
 
 const ScrollableItem = ({ link = "", imageSrc, name, description }) => {
-  return (
-    <Link href={link}>
-      <div className="w-[360px] sm:w-[480px] bg-[#101010] text-white p-4 rounded-2xl hover:scale-[103%] hover:opacity-75 duration-200">
-        <div className="relative h-[240px] sm:h-[300px]">
-          <Image 
-            src={imageSrc} 
-            alt={name} 
-            layout="fill" 
-            objectFit="cover" 
-            className="rounded-2xl duration-200" 
-          />
-          <h3 className={`absolute bottom-0 left-0 right-0 w-full bg-[#191919de] px-4 pt-2 text-center text-[30px] rounded-b-xl ${leagueBold.className}`}>
-            {name}
-          </h3>
-        </div>
-        <div className="mt-4 h-[80px]">
-          <p className="text-[20px] text-gray-300">{description}</p>
-        </div>
+  const card = (
+    <div className="w-[360px] max-w-[calc(100vw-2rem)] sm:w-[480px] sm:max-w-none flex-shrink-0 bg-[#101010] text-white p-4 rounded-2xl">
+      <div className="relative h-[240px] sm:h-[300px] overflow-hidden rounded-2xl">
+        <Image
+          src={imageSrc}
+          alt={name}
+          fill
+          sizes="(max-width: 640px) 360px, 480px"
+          className="object-cover duration-200"
+        />
+        <h3 className={`absolute bottom-0 left-0 right-0 flex min-h-[64px] items-center justify-center bg-[#191919de] px-4 text-center text-[30px] leading-tight ${leagueBold.className}`}>
+          {name}
+        </h3>
       </div>
+      <div className="mt-4 h-[80px]">
+        <p className="text-[20px] text-gray-300">{description}</p>
+      </div>
+    </div>
+  );
+
+  if (!link) {
+    return card;
+  }
+
+  return (
+    <Link
+      href={link}
+      className="flex-shrink-0 rounded-2xl transition-all duration-200 hover:scale-[103%] hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+    >
+      {card}
     </Link>
   );
 };

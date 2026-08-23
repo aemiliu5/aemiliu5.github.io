@@ -47,7 +47,7 @@ const PersonalProjectsSection = () => {
 			<div className="mt-24" />
 
 			<div ref={ref} className={`scroll-fade-in ${isVisible ? 'visible' : ''}`}>
-				<TextDivider className="flex-row" text="PERSONAL PROJECTS" />
+				<TextDivider text="PERSONAL PROJECTS" />
 			</div>
 
 			<div ref={gridRef} className={`grid grid-cols-1 min-[1340px]:grid-cols-2 min-[1600px]:grid-cols-3 gap-x-8 gap-y-8 mt-16 px-4 sm:px-8 min-[1340px]:px-16 min-[1600px]:px-32 justify-items-center scroll-fade-in ${gridVisible ? 'visible' : ''}`}>

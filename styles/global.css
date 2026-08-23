@@ -179,3 +179,30 @@ html {
   align-items: center !important;
   gap: 1.5rem !important;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Keep scroll-revealed content readable when its transition is removed */
+  .scroll-fade-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* slideUp ends at opacity 0, so the phrase needs the animation dropped entirely */
+  .slidingText {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}

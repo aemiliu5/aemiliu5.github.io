@@ -13,7 +13,7 @@ const AbtosCovertSection = () => {
 
 	return (
 		<div ref={ref} className={`scroll-fade-in ${isVisible ? 'visible' : ''}`}>
-			<TextDivider className="flex-row" text="ABTOS COVERT" />
+			<TextDivider text="ABTOS COVERT" />
 
 			<div className="flex flex-col justify-center">
 				<div className="mt-8 justify-items-center items-center">
@@ -38,7 +38,7 @@ const AbtosCovertSection = () => {
 						>
 							<SocialMediaLink
 								fa={faSteam}
-								size="text-[15px] sm:text-[30px] hover:text-[#0ea5e9] transition-all duration-400 hover:scale-105 {league.className}"
+								size={`text-[15px] sm:text-[30px] hover:text-[#0ea5e9] transition-all duration-300 hover:scale-105 ${league.className}`}
 								iconOnly={true}
 							/>
 							<span className={`${leagueBold.className} text-[15px] sm:text-[30px] translate-y-[4%]`}>

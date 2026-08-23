@@ -45,11 +45,11 @@ const ProfessionalWorkSection = () => {
 	return (
 		<>
 			<div ref={ref} className={`scroll-fade-in ${isVisible ? 'visible' : ''}`}>
-				<TextDivider className="flex-row" text="PROFESSIONAL WORK" />
+				<TextDivider text="PROFESSIONAL WORK" />
 			</div>
 
-			<div className={`mt-16 sm:px-[170px] overflow-hidden scroll-fade-in ${isVisible ? 'visible' : ''}`}>
-				<div className="flex overflow-x-scroll scrollbar scrollbar-thumb-gray-400 space-x-8 h-[400px] sm:h-[500px]">
+			<div className={`mt-16 px-4 sm:px-[170px] overflow-hidden scroll-fade-in ${isVisible ? 'visible' : ''}`}>
+				<div className="flex overflow-x-auto scrollbar scrollbar-thumb-gray-400 space-x-8 h-[400px] sm:h-[500px]">
 					{professionalWorkItems.map((item, index) => (
 						<ScrollableItem
 							key={index}

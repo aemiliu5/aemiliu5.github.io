@@ -18,16 +18,16 @@
   }
   
   .slidingTextContainer {
-    display: inline-block;
+    display: block;
     width: 100%;
-    height: 120px; /* Adjust based on your font size */
-    position: absolute;
+    position: relative;
+    overflow: hidden;
   }
   
   .slidingText {
     position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     animation: slideUp 2.5s ease-in-out infinite;
   }
-  
