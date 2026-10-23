@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/games", label: "Games" },
   { href: "/photovideo", label: "Photo/Video" },
+  { href: "/music", label: "Music" },
   { href: "/aimilios-seimenis-cv-2025.pdf", label: "Resume", external: true },
 ];
 
@@ -71,7 +72,7 @@ function Navbar() {
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
-            className="text-white text-4xl md:hidden rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            className="text-white text-4xl lg:hidden rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
             ☰
@@ -84,7 +85,7 @@ function Navbar() {
 				menuOpen
 					? "translate-x-0 visible bg-gradient-to-r from-[#1e3599] to-[#0acc95]"
 					: "translate-x-full invisible bg-transparent"
-				} md:relative md:flex md:visible md:space-x-[4vw] md:space-y-0 md:bg-transparent md:w-auto md:p-0 md:h-auto md:transform-none ${
+				} lg:relative lg:flex lg:visible lg:space-x-[4vw] lg:space-y-0 lg:bg-transparent lg:w-auto lg:p-0 lg:h-auto lg:transform-none ${
 				league.className
 				}`}
 			>
