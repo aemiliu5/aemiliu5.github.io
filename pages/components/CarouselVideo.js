@@ -40,6 +40,7 @@ const CarouselVideo = () => {
     };
 
     const videoUrls = [
+        "https://www.youtube.com/embed/e2kJMjxjQfQ",
         "https://www.youtube.com/embed/jB_74EuQPJc",
         "https://www.youtube.com/embed/E6dRKYpR4v0",
         "https://www.youtube.com/embed/XiKO-LdqbAM",

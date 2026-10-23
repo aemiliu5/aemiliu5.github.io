@@ -12,6 +12,7 @@ export default function Games() {
 
     // Define all projects in an array with their categories
     const projects = [
+        { imageSrc: "/roadworthyish.jpg",     name: "ROADWORTHY(ISH)",                                         link: "https://aemiliu5.itch.io/roadworthyish",                                       category: "jam" },
         { imageSrc: "/prosopeion.jpg",        name: "PROSOPEION: CULT OF MASKS",                               link: "https://globalgamejam.org/games/2026/cult-masks-7",                            category: "jam" },
         { imageSrc: "/bubblin.png",         name: "BUBBLIN' TO THE TOP!",                   link: "https://globalgamejam.org/games/2025/cat-bubble-1",                      category: "jam" },
         { imageSrc: "/chuckles.png",        name: "CHUCKLES WITH THE FURRY CROWN",          link: "https://globalgamejam.org/games/2024/jester-2",                          category: "jam" },

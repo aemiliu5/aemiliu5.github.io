@@ -6,6 +6,11 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const personalProjects = [
 	{
+		imageSrc: "/roadworthyish.jpg",
+		name: "ROADWORTHY(ISH)",
+		link: "https://aemiliu5.itch.io/roadworthyish",
+	},
+	{
 		imageSrc: "/prosopeion.jpg",
 		name: "PROSOPEION: CULT OF MASKS",
 		link: "https://globalgamejam.org/games/2026/cult-masks-7",

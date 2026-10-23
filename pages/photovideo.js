@@ -227,7 +227,7 @@ export default function Photo() {
 								<div
 									className={`${dmSans.className} text-[18px] leading-6 mt-8 sm:mt-0 sm:leading-normal sm:text-[18px]`}
 								>
-									Alongside my main career, I've had the opportunity to work as a <b>photographer, videographer</b>, and <b>editor</b> across various commercial and creative projects. Photography started as a personal passion and evolved into something I continue to explore both artistically and professionally. If my work resonates with you, don't hesitate to reach out.
+									What began as a personal passion for photography has become something I pursue both creatively and professionally alongside my main career. As a <b>photographer, videographer</b>, and <b>editor</b>, I've shot weddings, events, interviews, music videos, among others. If you like what you see, I'd love to hear from you.
 								</div>
 							</div>
 						</div>
