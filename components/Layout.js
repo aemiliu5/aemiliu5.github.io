@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Head from 'next/head';
 
-const Layout = ({ children }) => {
+const SITE_URL = 'https://aemilius.dev';
+
+const Layout = ({ children, title, description }) => {
+    const fullTitle = title ? `${title} | Aimilios Seimenis` : 'Aimilios Seimenis - Game Programmer';
     const [showBackToTop, setShowBackToTop] = useState(false);
 
     useEffect(() => {
@@ -33,6 +36,18 @@ const Layout = ({ children }) => {
         <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>{fullTitle}</title>
+                <meta name="description" content={description} />
+                <link rel="icon" href="/favicons/favicon.ico" />
+                {/* Link previews (LinkedIn, Slack, Discord, X) */}
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="aemilius.dev" />
+                <meta property="og:title" content={fullTitle} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={`${SITE_URL}/og.jpg`} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
             <Navbar />

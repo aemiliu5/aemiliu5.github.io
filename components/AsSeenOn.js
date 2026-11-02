@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { leagueBold } from '../../utils/fonts';
+import { leagueBold } from '../utils/fonts';
 
 const mediaOutlets = [
 	{
@@ -57,15 +57,15 @@ const mediaOutlets = [
 const AsSeenOn = () => {
 	return (
 		<div className="mt-8">
-			<div className={`text-[24px] ${leagueBold.className} sm:text-[32px] font-semibold`}>
+			<div className={`text-[1.5rem] ${leagueBold.className} sm:text-[2rem] font-semibold`}>
 				AS SEEN ON
 			</div>
-			<div className="grid grid-cols-6 gap-6 items-center justify-items-center max-w-4xl mx-auto">
+			<div className="grid grid-cols-3 sm:grid-cols-6 gap-6 items-center justify-items-center max-w-4xl mx-auto">
 				{mediaOutlets.map((outlet) => (
 					<Link
 						key={outlet.name}
 						href={outlet.href}
-						className="hover:opacity-80 transition-opacity"
+						className="flex items-center justify-center min-w-[44px] min-h-[44px] hover:opacity-80 transition-opacity"
 						target="_blank"
 						rel="noopener noreferrer"
 					>

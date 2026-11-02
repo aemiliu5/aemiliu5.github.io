@@ -1,12 +1,12 @@
 import React from 'react';
-import { league, leagueBold, dmSans } from '../../utils/fonts';
+import { league, leagueBold, dmSans } from '../utils/fonts';
 import TextDivider from './TextDivider';
 import Carousel from './Carousel';
 import AsSeenOn from './AsSeenOn';
 import StyledButton from './StyledButton';
 import SocialMediaLink from './SocialMediaLink';
 import { faSteam } from '@fortawesome/free-brands-svg-icons';
-import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const AbtosCovertSection = () => {
 	const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
@@ -20,7 +20,7 @@ const AbtosCovertSection = () => {
 					<Carousel />
 				</div>
 
-				<div className={`text-[16px] ${dmSans.className} sm:text-[20px] text-center mx-8 sm:mx-[25vw] my-8`}>
+				<div className={`text-[1rem] ${dmSans.className} sm:text-[1.25rem] text-center mx-8 lg:mx-[25vw] my-8`}>
 					Abtos Covert is a survival horror game set in the remote Greek mountains. You play as a lone soldier guarding a remote outpost.
 
 					<br /><br />Released on Steam in <b>December 2023</b> to positive reviews.<br />
@@ -38,10 +38,10 @@ const AbtosCovertSection = () => {
 						>
 							<SocialMediaLink
 								fa={faSteam}
-								size={`text-[15px] sm:text-[30px] hover:text-[#0ea5e9] transition-all duration-300 hover:scale-105 ${league.className}`}
+								size={`text-[0.9375rem] sm:text-[1.875rem] hover:text-[#0ea5e9] transition-all duration-300 hover:scale-105 ${league.className}`}
 								iconOnly={true}
 							/>
-							<span className={`${leagueBold.className} text-[15px] sm:text-[30px] translate-y-[4%]`}>
+							<span className={`${leagueBold.className} text-[0.9375rem] sm:text-[1.875rem] translate-y-[4%]`}>
 								STEAM PAGE
 							</span>
 						</StyledButton>

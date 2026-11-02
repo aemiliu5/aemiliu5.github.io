@@ -23,6 +23,19 @@
   margin-bottom: 24px;
 }
 
+/* Bigger touch targets for carousel controls: 44px arrows, 24px dots that still look 8px.
+   Two classes so these win over Splide's theme CSS, which loads after this file. */
+.splide .splide__arrow {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.splide .splide__pagination__page {
+  box-sizing: content-box;
+  padding: 8px;
+  background-clip: content-box;
+}
+
 /* Grey overlay for non-active slides within video-splide */
 .video-splide .splide__slide {
   display: flex;

@@ -1,7 +1,7 @@
 import React from 'react';
 import TextDivider from './TextDivider';
-import ScrollableItem from './ScrollableItem';
-import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import ProjectCard from './ProjectCard';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const professionalWorkItems = [
 	{
@@ -48,15 +48,16 @@ const ProfessionalWorkSection = () => {
 				<TextDivider text="PROFESSIONAL WORK" />
 			</div>
 
-			<div className={`mt-16 px-4 sm:px-[170px] overflow-hidden scroll-fade-in ${isVisible ? 'visible' : ''}`}>
-				<div className="flex overflow-x-auto scrollbar scrollbar-thumb-gray-400 space-x-8 h-[400px] sm:h-[500px]">
+			<div className={`mt-16 px-4 lg:px-[170px] overflow-hidden scroll-fade-in ${isVisible ? 'visible' : ''}`}>
+				<div className="flex overflow-x-auto overflow-y-hidden scrollbar scrollbar-thumb-gray-400 space-x-8 py-4">
 					{professionalWorkItems.map((item, index) => (
-						<ScrollableItem
+						<ProjectCard
 							key={index}
 							link={item.link || ""}
 							imageSrc={item.imageSrc}
 							name={item.name}
 							description={item.description}
+							variant="work"
 						/>
 					))}
 				</div>

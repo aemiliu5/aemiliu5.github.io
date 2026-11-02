@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { league, leagueBold, dmSans } from '../../utils/fonts';
+import { league, leagueBold, dmSans } from '../utils/fonts';
 
 const phrases = [
 	"VIDEO GAMES",
@@ -33,28 +33,29 @@ const HeroSection = () => {
 	};
 
 	return (
-		<div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-stretch mt-[100px] md:mt-0">
+		<div className="flex flex-col-reverse lg:flex-row justify-center items-center lg:items-stretch mt-[100px] lg:mt-0">
 			<div
-				className={`text-[32px] ${dmSans.className} text-center sm:text-left sm:text-[48px] sm:px-16 md:px-4 pt-6 pb-16 sm:py-48`}
+				className={`text-[2rem] ${dmSans.className} text-center lg:text-left sm:text-[2.5rem] lg:text-[3rem] lg:px-4 pt-6 pb-16 lg:py-48`}
 			>
 				Hello there!<br />
-				<div className={`text-[32px] ${dmSans.className} text-center sm:text-left sm:text-[64px] leading-[1.3] py-3`}>
+				<div className={`text-[2rem] ${dmSans.className} text-center lg:text-left sm:text-[3rem] lg:text-[4rem] leading-[1.3] py-3`}>
 					I'm <b>Aimilios Seimenis</b><br />
 					& I work on:
 				</div>
-				<div className="slidingTextContainer relative h-[48px] sm:h-[120px]">
+				{/* Sized so the longest phrase ("PHOTOGRAPHY") fits the column at every width */}
+				<div className="slidingTextContainer relative h-[3rem] sm:h-[5rem] xl:h-[7.5rem]">
 					<div
-						className={`slidingText text-[32px] sm:text-[85px] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text ${leagueBold.className}`}
+						className={`slidingText text-[2rem] sm:text-[3.5rem] xl:text-[5.3125rem] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text ${leagueBold.className}`}
 					>
 						{phrases[currentPhrase]}
 					</div>
 				</div>
 			</div>
 
-			{/* Desktop: original left-0 layers + py-36 / ml-16 / mb-64.
-			    Mobile: scale-75 + self-center so the frame sits in the middle of the column. */}
+			{/* Desktop (lg+): side by side, full size; mr-6 keeps the crosshair's 105% scale on screen.
+			    Phones: scale-60, tablets: scale-75, centred above the text. Negative margins cancel the unscaled box. */}
 			<div
-				className="relative w-[500px] h-[500px] scale-75 origin-center -m-[62.5px] mb-[-40px] self-center sm:self-auto sm:m-0 sm:py-36 sm:ml-16 sm:mb-64 sm:scale-100 sm:translate-y-0 flex-shrink-0"
+				className="relative w-[500px] h-[500px] scale-[0.6] -m-[100px] mb-[-78px] sm:scale-75 sm:-m-[62.5px] sm:mb-[-40px] origin-center self-center lg:self-auto lg:m-0 lg:mr-6 lg:py-36 lg:ml-16 lg:mb-64 lg:scale-100 flex-shrink-0"
 			>
 				<Image
 					className="absolute left-0 brightness-[33%]"

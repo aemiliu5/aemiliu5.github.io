@@ -11,7 +11,7 @@ const Carousel = () => {
     ];
 
     return (
-        <div className="sm:mx-48">
+        <div className="lg:mx-48">
             <Splide
                 options={{
                     type: 'loop',
@@ -22,8 +22,8 @@ const Carousel = () => {
                     perPage: 2, // Default to 2 per page for desktop
                     perMove: 2, // Default to 2 per move (desktop)
                     breakpoints: {
-                        // On mobile devices (screen width ≤ 640px)
-                        1040: {
+                        // Below desktop (≤ 1023px, Tailwind lg)
+                        1023: {
                             perPage: 1, // Show 1 slide per page
                             perMove: 1, // Move 1 slide per click
                         },

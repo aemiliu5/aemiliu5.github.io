@@ -1,10 +1,9 @@
 import React from "react";
-import Head from "next/head";
-import Layout from "./components/Layout";
+import Layout from "../components/Layout";
 import { league, leagueBold, dmSans } from "../utils/fonts";
-import TextDivider from "./components/TextDivider";
-import SoundCloudEmbed from "./components/SoundCloudEmbed";
-import Footer from "./components/Footer";
+import TextDivider from "../components/TextDivider";
+import SoundCloudEmbed from "../components/SoundCloudEmbed";
+import Footer from "../components/Footer";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const tracks = [
@@ -30,7 +29,7 @@ function CompositionsSection() {
 								href={url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className={`${leagueBold.className} text-[24px] uppercase tracking-wide hover:text-[#3EB17E] transition-colors rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white`}
+								className={`${leagueBold.className} text-[1.5rem] uppercase tracking-wide hover:text-[#3EB17E] transition-colors rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white`}
 							>
 								{title}
 							</a>
@@ -45,18 +44,13 @@ function CompositionsSection() {
 export default function Music() {
 	return (
 		<>
-			<Layout>
+			<Layout title="Music" description="Original compositions by Aimilios Seimenis, who also plays keyboard in the band L.N.P.">
 				<div id="home" className="relative flex items-center justify-center w-full h-full">
-					<Head>
-						<title>Aimilios Seimenis - Game Programmer</title>
-						<link rel="icon" href="/favicons/favicon.ico" />
-					</Head>
-
 					<main className={`relative text-white ${league.className} page-background w-full h-full`}>
 						<div className="flex items-center">
-							<div className="p-6 sm:mx-48 h-[25%]">
-								<div className={`${leagueBold.className} text-[40px] sm:text-[60px] text-bold`}>MUSIC</div>
-								<div className={`${dmSans.className} text-[18px] leading-6 mt-8 sm:mt-0 sm:leading-normal sm:text-[18px] max-w-[70ch]`}>
+							<div className="p-6 lg:mx-48 h-[25%]">
+								<div className={`${leagueBold.className} text-[2.5rem] sm:text-[3.75rem] text-bold`}>MUSIC</div>
+								<div className={`${dmSans.className} text-[1.125rem] leading-6 mt-8 sm:mt-0 sm:leading-normal sm:text-[1.125rem] max-w-[70ch]`}>
 									<p>
 										I've always loved music and wanted to make my own. It started with the ringtone composers on my grandparents' old Nokia and Sony Ericsson phones; as a teenager it became piano lessons, a <b>Novation MiniNova</b> and <b>GarageBand</b>. For years I wrote little melodies that never grew into songs. Lately I've made a point of learning what makes a track whole, from structure to melody, and seeing them through. The finished ones are below.
 									</p>

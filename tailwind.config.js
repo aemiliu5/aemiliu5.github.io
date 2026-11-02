@@ -4,6 +4,7 @@ const plugin = require('tailwindcss/plugin');
 module.exports = {
   content: [
     './pages/**/*.{js,jsx}',        // Scan JS/JSX files in the "pages" directory and subdirectories
+    './components/**/*.{js,jsx}',  // Scan JS/JSX files in the "components" directory
     './hooks/**/*.{js,jsx}',       // Scan JS/JSX files in the "hooks" directory
     './utils/**/*.{js,jsx}',       // Scan JS/JSX files in the "utils" directory
     './styles/*.css',              // Correct glob pattern for styles

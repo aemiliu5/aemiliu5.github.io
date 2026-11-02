@@ -1,10 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import Layout from './components/Layout';
+import Layout from '../components/Layout';
 import { league, leagueBold, dmSans } from '../utils/fonts';
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 function AboutPair({ imageSrc, imageAlt, imageClass, title, content, isReversed }) {
@@ -22,8 +21,8 @@ function AboutPair({ imageSrc, imageAlt, imageClass, title, content, isReversed 
 				/>
 			</div>
 			<div className="w-full lg:w-1/2 p-6">
-				<h2 className={`${leagueBold.className} text-[32px] border-b-2 border-white/40 pb-1 mb-3 inline-block`}>{title}</h2>
-				<p className={`${dmSans.className} text-[18px] sm:text-[16px] max-w-[60ch] leading-relaxed`}>
+				<h2 className={`${leagueBold.className} text-[2rem] border-b-2 border-white/40 pb-1 mb-3 inline-block`}>{title}</h2>
+				<p className={`${dmSans.className} text-[1.125rem] max-w-[60ch] leading-relaxed`}>
 					{content}
 				</p>
 			</div>
@@ -34,18 +33,13 @@ function AboutPair({ imageSrc, imageAlt, imageClass, title, content, isReversed 
 export default function About() {
 	return (
 		<>
-			<Layout>
+			<Layout title="About" description="Aimilios Seimenis is a software developer from Athens working on games and XR: game jams, a Game Programming degree from Middlesex University, IPHIGAMES, and R&D at ICCS.">
 				<div id="home" className="relative flex items-center justify-center w-full h-full">
-					<Head>
-						<title>Aimilios Seimenis - Game Programmer</title>
-						<link rel="icon" href="/favicons/favicon.ico" />
-					</Head>
-
 					<main className={`relative text-white ${league.className} page-background w-full h-full`}>
                     	<div className={`flex items-center`}>
-                        	<div className={`p-6 sm:mx-48 h-[25%]`}>
-								<div className={`${leagueBold.className} text-[40px] sm:text-[60px] text-bold`}>ABOUT</div>
-								<div className={`${dmSans.className} text-[18px] leading-6 mt-8 sm:mt-0 sm:leading-normal sm:text-[18px] max-w-[70ch]`}>Hey there! I'm Aimilios, a passionate, detail-oriented <b>software developer</b> from Athens, Greece.
+                        	<div className={`p-6 lg:mx-48 h-[25%]`}>
+								<div className={`${leagueBold.className} text-[2.5rem] sm:text-[3.75rem] text-bold`}>ABOUT</div>
+								<div className={`${dmSans.className} text-[1.125rem] leading-6 mt-8 sm:mt-0 sm:leading-normal sm:text-[1.125rem] max-w-[70ch]`}>Hey there! I'm Aimilios, a passionate, detail-oriented <b>software developer</b> from Athens, Greece.
 								
 								<br />
 								 I specialize in immersive technologies and game development. I'm currently working on European R&D projects involving virtual and augmented reality, spatial computing, and human-computer interaction. I also have experience in web and mobile application development. Here's a brief overview of my professional journey.</div>
@@ -53,7 +47,7 @@ export default function About() {
                     	</div>
 
 						{/* New Section: Alternating Images and Text */}
-						<div className="sm:mx-48">
+						<div className="lg:mx-48">
 							{/* First Pair - Image Left, Text Right */}
 							<AboutPair 
 								imageSrc="/jams.png"

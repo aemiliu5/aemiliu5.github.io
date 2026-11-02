@@ -1,28 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import YouTubeVideo from "./YouTubeVideo";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import "@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css";
 
 const CarouselVideo = () => {
-    const splideRef = useRef(null);
-    const [isMobile, setIsMobile] = useState(false);
-
-    // Detect screen width
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
-        };
-
-        // Initialize state and add resize listener
-        handleResize();
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
     const handlePauseVideos = (splide) => {
         const iframes = splide.Components.Elements.slides.map(
             (slide) => slide.querySelector("iframe")
@@ -50,30 +32,27 @@ const CarouselVideo = () => {
         "https://www.youtube.com/embed/jhWttSVpVY8",
     ];
 
-    // Splide options for desktop
-    const desktopOptions = {
+    // Desktop options, with Splide's own breakpoint for phones and portrait tablets (≤ 768px, Tailwind md)
+    const options = {
         type: "loop",
         perPage: 3,
         gap: "1rem",
         padding: "5rem",
         heightRatio: 0.225,
         focus: "center",
-    };
-
-    // Splide options for mobile
-    const mobileOptions = {
-        type: "loop",
-        perPage: 1,
-        gap: "0.5rem",
-        padding: { left: "1.75rem", right: "1.75rem" },
-        heightRatio: 0.65,
-        focus: "center",
+        breakpoints: {
+            768: {
+                perPage: 1,
+                gap: "0.5rem",
+                padding: { left: "1.75rem", right: "1.75rem" },
+                heightRatio: 0.65,
+            },
+        },
     };
 
     return (
         <Splide
-            ref={splideRef}
-            options={isMobile ? mobileOptions : desktopOptions}
+            options={options}
             onMoved={(splide) => handlePauseVideos(splide)}
             style={{ margin: "auto" }}
         >

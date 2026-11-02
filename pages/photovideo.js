@@ -1,12 +1,11 @@
 // pages/index.js (or your Home component file)
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
-import Layout from "./components/Layout"; // Adjust path as necessary
+import Layout from "../components/Layout"; // Adjust path as necessary
 import { league, leagueBold, dmSans } from "../utils/fonts"; // Adjust path as necessary
-import TextDivider from "./components/TextDivider";
-import CarouselVideo from "./components/CarouselVideo";
-import Footer from "./components/Footer";
+import TextDivider from "../components/TextDivider";
+import CarouselVideo from "../components/CarouselVideo";
+import Footer from "../components/Footer";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import Masonry from "react-masonry-css";
 import Lightbox from "yet-another-react-lightbox";
@@ -28,13 +27,13 @@ const images = [
 		description: "📷 Camera: Fujifilm X100VI 🔍 Aperture: f/2 ⏱️ Shutter Speed: 1/6400s🌡️ ISO: 125"
 	},
 	{ 
-		src: "/photos/milies.png", 
+		src: "/photos/milies.jpg", 
 		alt: "Milies Train Tracks",
 		title: "Milies Train Tracks",
 		description: "📷 Camera: Nikon D7500 🔍 Aperture: f/3.5 ⏱️ Shutter Speed: 1/200s🌡️ ISO: 1600"
 	},
 	{ 
-		src: "/photos/salonika.png", 
+		src: "/photos/salonika.jpg", 
 		alt: "Salonika",
 		title: "Thessaloniki",
 		description: "📷 Camera: Nikon D7500 🔍 Aperture: f/3.5 ⏱️ Shutter Speed: 1/1250s🌡️ ISO: 100"
@@ -143,7 +142,7 @@ function PhotoSection({ lightboxIndex, setLightboxIndex, images, formattedImages
 		<div ref={ref} className={`mt-4 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
 			<TextDivider className="flex-row" text="PHOTOGRAPHY" />
 
-			<div className="flex flex-col justify-center items-center mx-12 sm:mx-32 mb-16">
+			<div className="flex flex-col justify-center items-center mx-12 lg:mx-32 mb-16">
 				<Masonry
 					breakpointCols={breakpointColumns}
 					className="my-masonry-grid"
@@ -202,7 +201,8 @@ export default function Photo() {
 
 	const breakpointColumns = {
 		default: 4,
-		768: 2,
+		1023: 3,
+		639: 2,
 	};
 
 	// Transform images to include formatted descriptions as React elements
@@ -213,19 +213,14 @@ export default function Photo() {
 
 	return (
 		<>
-			<Layout>
+			<Layout title="Photo/Video" description="Photography and videography by Aimilios Seimenis: landscapes across Greece, events, interviews and music videos.">
 				<div id="home" className="relative flex items-center justify-center w-full h-full">
-					<Head>
-						<title>Aimilios Seimenis - Game Programmer</title>
-						<link rel="icon" href="/favicons/favicon.ico" />
-					</Head>
-
 					<main className={`relative text-white ${league.className} page-background w-full h-full`}>
 						<div className={`flex items-center`}>
-							<div className={`p-6 sm:mx-48 h-[25%]`}>
-								<div className={`${leagueBold.className} text-[40px] sm:text-[60px] text-bold`}>PHOTO/VIDEO</div>
+							<div className={`p-6 lg:mx-48 h-[25%]`}>
+								<div className={`${leagueBold.className} text-[2.5rem] sm:text-[3.75rem] text-bold`}>PHOTO/VIDEO</div>
 								<div
-									className={`${dmSans.className} text-[18px] leading-6 mt-8 sm:mt-0 sm:leading-normal sm:text-[18px]`}
+									className={`${dmSans.className} text-[1.125rem] leading-6 mt-8 sm:mt-0 sm:leading-normal sm:text-[1.125rem]`}
 								>
 									What began as a personal passion for photography has become something I pursue both creatively and professionally alongside my main career. As a <b>photographer, videographer</b>, and <b>editor</b>, I've shot weddings, events, interviews, music videos, among others. If you like what you see, I'd love to hear from you.
 								</div>

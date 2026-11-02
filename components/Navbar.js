@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { league, leagueBold } from "../../utils/fonts.js";
-import "tailwind-scrollbar";
+import { league, leagueBold } from "../utils/fonts.js";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -13,7 +12,7 @@ const navLinks = [
 ];
 
 const linkClasses =
-  "relative text-white text-[32px] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
+  "relative text-white text-[2rem] text-shadow-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] duration-300 hover:text-gray-200 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false); // State to manage the hamburger menu
@@ -54,7 +53,7 @@ function Navbar() {
         <div className="flex justify-between items-center px-8">
           {/* Logo */}
           <div
-            className={`text-left text-white text-[36px] sm:text-[54px] text-shadow-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] ${leagueBold.className}`}
+            className={`text-left text-white text-[2.25rem] lg:text-[3.375rem] text-shadow-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] ${leagueBold.className}`}
           >
             <Link
               href="/"
@@ -72,20 +71,20 @@ function Navbar() {
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
-            className="text-white text-4xl lg:hidden rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            className="relative z-10 w-11 h-11 flex items-center justify-center text-white text-4xl lg:hidden rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
-            ☰
+            {menuOpen ? "✕" : "☰"}
           </button>
 
           {/* Navigation Links */}
 			<ul
 				id="mobile-menu"
-				className={`fixed top-0 right-0 h-full w-[60vw] p-8 space-y-6 text-right transform transition-all duration-300 ${
+				className={`fixed top-0 right-0 h-full w-[60vw] p-8 pt-20 space-y-6 overflow-y-auto text-right transform transition-all duration-300 ${
 				menuOpen
-					? "translate-x-0 visible bg-gradient-to-r from-[#1e3599] to-[#0acc95]"
+					? "translate-x-0 visible bg-gradient-to-b from-[#1e3599] to-[#2b1642]"
 					: "translate-x-full invisible bg-transparent"
-				} lg:relative lg:flex lg:visible lg:space-x-[4vw] lg:space-y-0 lg:bg-transparent lg:w-auto lg:p-0 lg:h-auto lg:transform-none ${
+				} lg:relative lg:flex lg:visible lg:overflow-visible lg:space-x-[4vw] lg:space-y-0 lg:bg-transparent lg:w-auto lg:p-0 lg:h-auto lg:transform-none ${
 				league.className
 				}`}
 			>
